@@ -9,7 +9,14 @@
   #nav a:active {color:#c11}
   #nav a:visited {color:#2200C1}
   .b {font-weight:bold}
-%table#nav{:style => 'border-collapse:collapse;text-align:left;direction:ltr;margin:17px auto 0'}
-  %tbody
-    %tr{:valign => 'top'}
-      = content_for :kaminari_paginator_tags
+= paginator.render do
+  %table#nav{:style => 'border-collapse:collapse;text-align:left;direction:ltr;margin:17px auto 0'}<
+    %tbody><
+      %tr{:valign => 'top'}><
+        = current_page > 1 ? prev_link_tag : prev_span_tag
+        - each_page do |page|
+          - if page.current?
+            = current_page_tag
+          - elsif page.inside_window?
+            = page_link_tag
+        = num_pages > current_page ? next_link_tag : next_span_tag

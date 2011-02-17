@@ -5,4 +5,8 @@
 .pagination span.current{padding:.1em .3em;margin:.2em;border:1px solid #369;font-weight:bold;background-color:#369;color:#FFF;}
 .pagination span.disabled{padding:.1em .3em;margin:.2em;border:1px solid #eee;color:#ddd;}
 </style>
-<div class="pagination"><%= content_for :kaminari_paginator_tags %></div>
+<%= paginator.render do -%>
+<div class="pagination"><%= current_page > 1 ? prev_link_tag : prev_span_tag -%>
+<%= num_pages > current_page ? next_link_tag : next_span_tag -%>
+</div>
+<% end -%>
