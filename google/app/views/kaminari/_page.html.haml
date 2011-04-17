@@ -1,0 +1,7 @@
+- if page.current?
+  %td.cur<
+    %span.csb{:style => 'background-position:-53px 0;width:20px'}
+    = page
+- else
+  %td<
+    = link_to raw(%Q[<span class="csb ch" style="background-position:-74px 0;width:20px"></span>#{page}]), url, :class => 'fl', :remote => remote

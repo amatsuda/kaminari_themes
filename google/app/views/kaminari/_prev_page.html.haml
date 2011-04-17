@@ -1,2 +1,4 @@
-%td.b<
+- if current_page.first?
+  %span.csb{:style => 'background-position:-24px 0;width:28px'}
+- else
   = link_to raw('<span class="csb ch" style="background-position:0 0;float:right;width:53px"></span><span style="display:block;margin-right:35px;clear:right;text-decoration:underline">Previous</span>'), url, :class => 'pn knavi', :id => 'pnprev', :style => 'text-decoration:none', :remote => remote

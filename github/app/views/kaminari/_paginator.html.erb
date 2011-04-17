@@ -6,7 +6,5 @@
 .pagination span.disabled{padding:.1em .3em;margin:.2em;border:1px solid #eee;color:#ddd;}
 </style>
 <%= paginator.render do -%>
-<div class="pagination"><%= current_page > 1 ? prev_link_tag : prev_span_tag -%>
-<%= num_pages > current_page ? next_link_tag : next_span_tag -%>
-</div>
+<div class="pagination"><%= prev_page_tag -%><%= next_page_tag -%></div>
 <% end -%>

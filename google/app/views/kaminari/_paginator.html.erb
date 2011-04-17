@@ -11,15 +11,9 @@
 .b {font-weight:bold}
 </style>
 <%= paginator.render do -%>
-  <table id="nav" style="border-collapse:collapse;text-align:left;direction:ltr;margin:17px auto 0"><tbody><tr valign="top">
-<%=    current_page > 1 ? prev_link_tag : prev_span_tag -%>
-    <% each_page do |page| %>
-      <% if page.current? %>
-<%=        current_page_tag -%>
-      <% elsif page.inside_window? %>
-<%=        page_link_tag -%>
-      <% end %>
-    <% end %>
-<%=    num_pages > current_page ? next_link_tag : next_span_tag -%>
+<table id="nav" style="border-collapse:collapse;text-align:left;direction:ltr;margin:17px auto 0"><tbody><tr valign="top">
+<td class="b"><%= prev_page_tag -%></td>
+<% each_page.select(&:inside_window?).each do |page| %><%= page_tag page -%><% end %>
+<td class="b"><%= next_page_tag -%></td>
 </tr></tbody></table>
 <% end %>

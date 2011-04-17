@@ -6,5 +6,5 @@
   .pagination span.disabled{padding:.1em .3em;margin:.2em;border:1px solid #eee;color:#ddd;}
 = paginator.render do
   .pagination<
-    = current_page > 1 ? prev_link_tag : prev_span_tag
-    = num_pages > current_page ? next_link_tag : next_span_tag
+    = prev_page_tag
+    = next_page_tag
