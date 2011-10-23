@@ -1,0 +1,46 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    num_pages:     total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+  -%>
+  <% unless num_pages == 1 %>
+<div class="pagination">
+  <ul>
+    <% if current_page.first? %>
+      <%= content_tag(:li, paginator.first_page_tag, :class => "prev disabled") %>
+      <%= content_tag(:li, paginator.prev_page_tag, :class => "disabled") %>
+    <% else %>
+      <%= content_tag(:li, paginator.first_page_tag, :class => "prev") %>
+      <%= content_tag(:li, paginator.prev_page_tag) %>
+      
+    <% end %>
+
+    <% paginator.each_page do |page| %>
+
+      <% if page.left_outer? || page.right_outer? || page.inside_window? %>
+        <% if page == current_page %>
+          <%= content_tag(:li, paginator.page_tag(page), :class => "active") %>
+        <% else %>
+          <%= content_tag(:li, paginator.page_tag(page)) %>
+        <% end %>
+      <% elsif !page.was_truncated? %>
+        <%= content_tag(:li, paginator.gap_tag, :class => "disabled") %>
+      <% end %>
+
+    <% end %>
+
+    <% if current_page.last? %>
+      <%= content_tag(:li, paginator.next_page_tag, :class => "disabled") %>
+      <%= content_tag(:li, paginator.last_page_tag, :class => "disabled next") %>
+    <% else %>
+      <%= content_tag(:li, paginator.next_page_tag) %>
+      <%= content_tag(:li, paginator.last_page_tag, :class => "next") %>
+    <% end %>
+
+
+  </ul>
+</div>
+<% end %>
