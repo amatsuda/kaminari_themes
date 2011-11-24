@@ -1,1 +1,3 @@
-<%= link_to_unless current_page.first?, raw('&laquo; Newer'), url, :remote => remote do |name| -%><span class="disabled"><%= name %></span><% end -%>
+<%= link_to_unless current_page.first?, raw(t 'views.pagination.previous') , url, :remote => remote do |name| -%>
+  <span class="disabled"><%= name %></span>
+<% end -%>

@@ -11,9 +11,17 @@
 .b {font-weight:bold}
 </style>
 <%= paginator.render do -%>
-<table id="nav" style="border-collapse:collapse;text-align:left;direction:ltr;margin:17px auto 0"><tbody><tr valign="top">
-<td class="b"><%= prev_page_tag -%></td>
-<% each_page.select(&:inside_window?).each do |page| %><%= page_tag page -%><% end %>
-<td class="b"><%= next_page_tag -%></td>
-</tr></tbody></table>
+<table id="nav" style="border-collapse:collapse;text-align:left;direction:ltr;margin:17px auto 0">
+  <tbody>
+    <tr valign="top">
+      <td class="b"><%= prev_page_tag -%></td>
+        <% each_page.select(&:inside_window?).each do |page| %>
+          <%= page_tag page -%>
+        <% end %>
+      <td class="b">
+        <%= next_page_tag -%>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <% end %>
