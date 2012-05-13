@@ -1,0 +1,3 @@
+<li class="last">
+  <%= link_to_unless current_page.last?, raw(t 'views.pagination.last'), url, {:remote => remote} %>
+</li>
