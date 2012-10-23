@@ -1,0 +1,2 @@
+A Twitter Bootstrap Wrapper
+Add gem "twitter-bootstrap-rails", :git => "http://github.com/seyhunak/twitter-bootstrap-rails.git" to your Gemfile it's magick !
