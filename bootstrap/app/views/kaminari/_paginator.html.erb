@@ -1,6 +1,6 @@
 <%= paginator.render do -%>
   <div class="pagination">
-    <ul>
+    <ul class="pagination">
       <%= first_page_tag unless current_page.first? %>
       <%= prev_page_tag unless current_page.first? %>
       <% each_page do |page| -%>
