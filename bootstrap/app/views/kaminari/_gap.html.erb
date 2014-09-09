@@ -1,3 +1,1 @@
-<li class="disabled">
-  <%= link_to raw(t 'views.pagination.truncate'), '#' %>
-</li>
+<%= content_tag :li, content_tag( :a, raw(t 'views.pagination.truncate')), class: :disabled %>
