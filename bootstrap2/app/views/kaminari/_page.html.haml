@@ -1,0 +1,6 @@
+- if page.current?
+  %li.active
+    = content_tag :a, page, remote: remote, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil))
+- else
+  %li
+    = link_to page, url, remote: remote, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil))
