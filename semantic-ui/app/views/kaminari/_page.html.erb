@@ -1,0 +1,9 @@
+<% if page.current? %>
+  <a class="item active" href="<%= url %>" title="<%= t('views.pagination.page.current') %> <%= page %>">
+    <%= page %>
+  </a>
+<% else %>
+  <a class="item" href="<%= url %>" title="<%= t('views.pagination.page.goto') %> <%= page %>">
+    <%= page %>
+  </a>
+<% end %>

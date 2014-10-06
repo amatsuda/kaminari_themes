@@ -1,0 +1,6 @@
+- if page.current?
+  %a.item.active{ href: url, title: t('views.pagination.page.current') + " #{page}" }
+    = page
+- else
+  %a.item{ href: url, title: t('views.pagination.page.goto') + " #{page}" }
+    = page
