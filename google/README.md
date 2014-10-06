@@ -1,2 +1,3 @@
-A googlish one.
+# A googl-ish theme
+
 Try with this option  :window => 10, :outer_window => -1

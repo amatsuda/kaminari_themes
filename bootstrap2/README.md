@@ -1,0 +1,1 @@
+# Pagination for [Twitter Bootstrap 2](http://getbootstrap.com/2.3.2/components.html#pagination)
