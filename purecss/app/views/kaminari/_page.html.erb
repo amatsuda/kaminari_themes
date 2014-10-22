@@ -1,0 +1,3 @@
+<li class="pure-button<%= ' pure-button-active' if page.current? %>">
+  <%= link_to page, url, {:remote => remote, :rel => page.next? ? 'next' : page.prev? ? 'prev' : nil} %>
+</li>
