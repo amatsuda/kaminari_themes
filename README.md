@@ -7,7 +7,7 @@ in addition to the bundled "default" one, which will help you creating a nice lo
 
 You can also specify between erb, haml or slim (in some themes):
 
-    rails g kaminari:views semantic-ui -e haml
+    rails g kaminari:views semantic -e haml
 
 To see the full list of avaliable themes, take a look at the themes repository,
 or just hit the generator without specifying THEME argument.
