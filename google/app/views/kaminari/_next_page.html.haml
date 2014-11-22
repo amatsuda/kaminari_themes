@@ -1,4 +1,7 @@
 - if current_page.last?
-  %span.csb{:style => 'background-position:-96px 0;width:45px'}
+  %span(:class => "csb", :style => 'background-position:-96px 0;width:45px')
 - else
-  = link_to raw('<span class="csb ch" style="background-position:-96px 0;width:71px"></span><span style="display:block;margin-left:53px;text-decoration:underline">Next</span>'), url, :class => 'pn knavi', :id => 'pnnext', :style => 'text-align:left;text-decoration:none', :remote => remote
+  = link_to url, :class => 'pn knavi', :id => 'pnnext', :style => 'text-align:left;text-decoration:none', :remote => remote do
+    %span(:class => "csb ch", :style => "background-position:-96px 0;width:71px")
+    %span(:style => "display:block;margin-left:53px;text-decoration:underline")
+      = raw(t 'views.pagination.next')

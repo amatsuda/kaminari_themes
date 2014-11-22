@@ -1,1 +1,3 @@
-<%= link_to_unless current_page.last?, raw('Older &raquo;'), url, :remote => remote do |name| -%><span class="disabled"><%= name %></span><% end -%>
+<%= link_to_unless current_page.last?, raw(t 'views.pagination.next') , url, :remote => remote do |name| -%>
+  <span class="disabled"><%= name %></span>
+<% end -%>
