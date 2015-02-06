@@ -1,0 +1,50 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    total_pages:   total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+-%>
+
+<!--
+# 1 what it will look like
+#don't forget to add the css
+<section>
+
+  <nav role="navigation">
+    <ul class="cd-pagination">
+      <li class="button"><a class="disabled" href="#0">Prev</a></li>
+      <li><a class="current" href="#0">1</a></li>
+      <li><a href="#0">2</a></li>
+      <li><a href="#0">3</a></li>
+      <li><a href="#0">4</a></li>
+      <li><span>...</span></li>
+      <li><a href="#0">20</a></li>
+      <li class="button"><a href="#0">Next</a></li>
+    </ul>
+  </nav> 
+</section>
+
+-->
+
+
+
+<%= paginator.render do -%>
+  <nav  role="codyhouse">
+    <ul class="cd-pagination">
+      <%#= first_page_tag unless current_page.first? %>
+      <%= prev_page_tag unless current_page.first? %>
+      <% each_page do |page| -%>
+        <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+          <%= page_tag page %>
+        <% elsif !page.was_truncated? -%>
+          <%= gap_tag %>
+        <% end -%>
+      <% end -%>
+      <%= next_page_tag unless current_page.last? %>
+      <%#= last_page_tag unless current_page.last? %>
+    </ul>
+  </nav>
+<% end -%> 
+
