@@ -1,5 +1,9 @@
 ## Pagination for [Codyhouse -1](http://codyhouse.co/demo/pagination/index.html)
 
+![GitHub Logo](http://i121.photobucket.com/albums/o205/guinslym/stackoverflow/Screenshot%20from%202015-02-06%20011440_zpsw5rzcbte.png)
+Format: ![Alt Text](url)
+
+
 With support for:
 
 - erb
@@ -87,4 +91,15 @@ nav[role="codyhouse"] {
 
 
 
+```
+
+config/locales/[your language].yml (notes: instead of french; modify the text below)
+```yaml
+  views:
+    pagination:
+      previous: "Pr&eacute;c&eacute;dent"
+      next: "Suivant"
+      truncate: "..."
+      first: "Premier"
+      last: "Dernier"
 ```
