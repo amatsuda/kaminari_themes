@@ -1,4 +1,4 @@
-## Pagination for [Codyhouse -1](codyhouse.co/demo/pagination/index.html)
+## Pagination for [Codyhouse -1](http://codyhouse.co/demo/pagination/index.html)
 
 With support for:
 
