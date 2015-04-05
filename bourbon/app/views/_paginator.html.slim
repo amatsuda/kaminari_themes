@@ -1,0 +1,12 @@
+= paginator.render do
+  div.pagination
+    ul
+      = raw(prev_page_tag) unless current_page.first?
+      li
+        ul
+          - each_page do |page|
+            - if page.left_outer? || page.right_outer? || page.inside_window?
+              = raw(page_tag(page))
+            - elsif !page.was_truncated?
+              = raw(gap_tag)
+      = raw(next_page_tag) unless current_page.last?
