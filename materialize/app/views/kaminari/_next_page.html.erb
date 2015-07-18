@@ -1,0 +1,13 @@
+<% if current_page.last? %>
+  <li class="disabled">
+    <%= content_tag :a do %>
+      <i class="material-icons">chevron_right</i>
+    <% end %>
+  </li>
+<% else %>
+  <li class="waves-effect">
+    <%= link_to url, :rel => 'next', :remote => remote do %>
+      <i class="material-icons">chevron_right</i>
+    <% end %>
+  </li>
+<% end %>
