@@ -1,0 +1,8 @@
+- if current_page.last?
+  li.disabled
+    = content_tag :a do
+      i.material-icons chevron_right
+- else
+  li.waves-effect
+    = link_to url, :rel => 'next', :remote => remote do
+      i.material-icons chevron_right
