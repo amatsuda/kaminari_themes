@@ -1,4 +1,4 @@
-# [Kaminari Themes](https://github.com/amatsuda/kaminari)
+# [Kaminari](https://github.com/amatsuda/kaminari) Themes
 
 The generator has the ability to fetch several sample template themes from this repository
 in addition to the bundled "default" one, which will help you creating a nice looking paginator.
