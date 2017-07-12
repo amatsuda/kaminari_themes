@@ -1,9 +1,9 @@
 <% if page.current? %>
-  <a class="item active" href="<%= url %>" title="<%= page %>">
+  <%= link_to url, class: 'item active', title: page, remote: remote do %>
     <%= page %>
-  </a>
+  <% end %>
 <% else %>
-  <a class="item" href="<%= url %>" title="<%= page %>">
+  <%= link_to url, class: 'item', title: page, remote: remote do %>
     <%= page %>
-  </a>
+  <% end %>
 <% end %>

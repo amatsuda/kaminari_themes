@@ -1,3 +1,3 @@
-<a class="item" href="<%= url %>" title="<%= t('views.pagination.last') %>">
+<%= link_to url, class: 'item', title: t('views.pagination.last').html_safe, remote: remote do %>
   <i class="fast forward icon"></i>
-</a>
+<% end %>

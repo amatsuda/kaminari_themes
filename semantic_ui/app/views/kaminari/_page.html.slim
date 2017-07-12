@@ -1,6 +1,6 @@
 - if page.current?
-  a.item.active href=url title=("#{page}")
+  = link_to url, title: page, class: 'item active', remote: remote do
     = page
 - else
-  a.item href=url title=("#{page}")
+  = link_to url, title: page, class: 'item', remote: remote do
     = page
